@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Pipelayer's Bible | Field to office, seamlessly</title>
+<title>Pipe Grade, Cut Sheet &amp; Daily Report App | The Pipelayer's Bible</title>
 <style>@font-face{font-family:'Oswald';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/oswald-latin-500-normal.woff2) format('woff2')}@font-face{font-family:'Oswald';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/oswald-latin-600-normal.woff2) format('woff2')}@font-face{font-family:'Oswald';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/oswald-latin-700-normal.woff2) format('woff2')}</style>
 <link rel="preload" href="/fonts/oswald-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<meta name="description" content="A phone app built for underground pipe crews. It works with no signal and puts the day's work in front of the foreman and the office without anyone retyping it. Free 30-day trial.">
+<meta name="description" content="App for underground pipe crews: grade from stakes and cut sheets, daily reports, confined space permits. Works with no signal. Free 30-day trial.">
 <link rel="canonical" href="https://pipelayersbible.com/">
 <meta name="theme-color" content="#111318">
 <meta name="color-scheme" content="light">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Pipelayer's Bible">
-<meta property="og:title" content="The Pipelayer's Bible | Field to office, seamlessly">
+<meta property="og:title" content="Pipe Grade, Cut Sheet &amp; Daily Report App | The Pipelayer's Bible">
 <meta property="og:description" content="A phone app built for underground pipe crews. Works with no signal. Free 30-day trial for your company and 6 people.">
 <meta property="og:url" content="https://pipelayersbible.com/">
 <meta property="og:image" content="https://pipelayersbible.com/img/og-share.png">
@@ -20,7 +20,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="The Pipelayer's Bible logo, a gold scope on black, with the words Field to office, seamlessly">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Pipelayer's Bible | Field to office, seamlessly">
+<meta name="twitter:title" content="Pipe Grade, Cut Sheet &amp; Daily Report App | The Pipelayer's Bible">
 <meta name="twitter:description" content="A phone app built for underground pipe crews. Works with no signal. Free 30-day trial.">
 <meta name="twitter:image" content="https://pipelayersbible.com/img/og-share.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -77,6 +77,21 @@ section{padding:56px 0}
 .top-call svg{width:18px;height:18px;color:var(--yellow)}
 .top-call .num{display:none}
 @media (min-width:640px){.top-call .num{display:inline}.top-call .word{display:none}}
+
+
+
+
+/* site nav (same as css/site.css) */
+.topbar .wrap{flex-wrap:wrap;gap:0 12px}
+.brand{min-height:64px}
+.site-nav{order:3;width:100%;border-top:1px solid var(--ink-3)}
+.site-nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:0 8px}
+.site-nav a{display:inline-flex;align-items:center;min-height:44px;color:var(--on-dark);text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap}
+.site-nav a:hover{color:var(--yellow)}
+.site-nav a[aria-current="page"]{color:var(--yellow);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+.site-nav .nav-cta{color:var(--yellow)}
+@media (min-width:900px){.site-nav{order:2;width:auto;border-top:0;margin-left:auto}.site-nav ul{gap:0 24px}.top-call{order:4}}
+.foot-h{font-family:var(--head);text-transform:uppercase;letter-spacing:.1em;font-size:14px;color:var(--yellow);margin:0 0 4px}
 
 /* hero */
 .hero{background:var(--ink);color:var(--on-dark);padding:36px 0 0;position:relative;overflow:hidden}
@@ -212,8 +227,112 @@ form{display:grid;gap:18px}
 .foot-links a{color:var(--on-dark);display:inline-block;padding:8px 0}
 .foot-links a:hover{color:var(--yellow)}
 .copy{margin:0;color:#8C919C;font-size:14px}
-@media (min-width:900px){.site-foot .wrap{grid-template-columns:1fr 1.4fr;align-items:center}.copy{grid-column:1/-1}}
+@media (min-width:900px){.site-foot .wrap{grid-template-columns:1fr 1.4fr;align-items:center}.foot-more,.copy{grid-column:1/-1}}
 </style>
+<script type="application/ld+json" id="site-ld">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://pipelayersbible.com/#org",
+   "name": "The Pipelayer's Bible",
+   "url": "https://pipelayersbible.com/",
+   "logo": "https://pipelayersbible.com/img/logo-192.png",
+   "telephone": "+1-909-435-5250",
+   "email": "tfontaine@pipelayersbible.com"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://pipelayersbible.com/#website",
+   "url": "https://pipelayersbible.com/",
+   "name": "The Pipelayer's Bible",
+   "publisher": {
+    "@id": "https://pipelayersbible.com/#org"
+   },
+   "inLanguage": "en-US"
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://pipelayersbible.com/#app",
+   "name": "The Pipelayer's Bible",
+   "url": "https://app.pipelayersbible.com",
+   "applicationCategory": "BusinessApplication",
+   "operatingSystem": "iOS, Android (web app)",
+   "description": "A phone app built for underground pipe crews. It works with no signal and puts the day's work in front of the foreman and the office without anyone retyping it.",
+   "image": "https://pipelayersbible.com/img/og-share.png",
+   "screenshot": [
+    "https://pipelayersbible.com/img/shot-grade-sheet.webp",
+    "https://pipelayersbible.com/img/shot-daily-report.webp"
+   ],
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "url": "https://pipelayersbible.com/#start",
+    "description": "Free 30-day trial for your company account plus 6 people. No credit card, and no automatic payment when it is over."
+   },
+   "publisher": {
+    "@id": "https://pipelayersbible.com/#org"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://pipelayersbible.com/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Does it work with no signal?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Runs, calculators and permits work with no signal. Records save on the phone and send when signal is back. The AI features, signing in and anything shared with the office need signal, and until a record has sent, the only copy is on that phone."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What phones does it work on?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "iPhone and Android. It runs in the phone's browser, and you add it to the home screen so it opens like any other app. No app store needed. The first time, open it and sign in where there's signal."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Who owns our data?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Your company. Our Terms of Use say that, between your company and us, your company owns the records your crew puts in, and your account owner controls who can see them. You can export your records from the app while the account is open, and for at least 60 days after it closes. We don't sell your information. Details are in the Privacy Policy."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does it replace our safety program?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. The confined space permit form records what your crew enters. It doesn't replace your safety program, your air monitor, training or your competent person. The emergency button opens the phone's dialer to the number on the permit; someone still makes the call, and it needs signal."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is the AI always right?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. AI can make mistakes. It can misread a stake or give a wrong answer, so crews check every value against the stake, the plans and their own instrument before using it. On safety questions, your competent person and your site's program decide."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What happens after 30 days?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nothing is charged automatically, and there's no card on file to charge. Thomas talks with you about keeping it. Records already sent stay in your company's account and stay readable. If you don't continue, new runs wait on each phone until the company starts a plan."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -224,6 +343,7 @@ form{display:grid;gap:18px}
       <img src="/img/logo-96.png" width="40" height="40" alt="">
       <span><small>The</small>Pipelayer's Bible</span>
     </a>
+    <nav class="site-nav" aria-label="Main"><ul><li><a href="/" aria-current="page">Home</a></li><li><a href="/tools/">Free tools</a></li><li><a href="/guides/">Guides</a></li><li><a href="/#start" class="nav-cta">Start a free trial</a></li></ul></nav>
     <a class="top-call" href="tel:+19094355250" aria-label="Call Thomas at (909) 435-5250">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
       <span class="word">Call</span><span class="num">(909) 435-5250</span>
@@ -509,6 +629,18 @@ form{display:grid;gap:18px}
       <li><a href="tel:+19094355250">(909) 435-5250</a></li>
       <li><a href="mailto:tfontaine@pipelayersbible.com">tfontaine@pipelayersbible.com</a></li>
     </ul>
+    <div class="foot-more">
+      <p class="foot-h">Free tools and guides</p>
+      <ul class="foot-links">
+        <li><a href="/tools/">Free tools</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/tools/pipe-grade-calculator/">Pipe grade calculator</a></li>
+        <li><a href="/tools/trench-sloping/">Trench sloping</a></li>
+        <li><a href="/grade-and-cut-sheet-app/">Grade and cut sheets</a></li>
+        <li><a href="/daily-reports-for-underground-crews/">Daily reports</a></li>
+        <li><a href="/confined-space-permit-app/">Confined space permits</a></li>
+      </ul>
+    </div>
     <p class="copy">&copy; 2026 The Pipelayer's Bible</p>
     <p class="copy">This site counts visits with GoatCounter: no cookies and no personal tracking.</p>
   </div>
