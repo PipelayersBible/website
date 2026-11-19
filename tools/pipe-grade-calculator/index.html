@@ -6,7 +6,7 @@
 <title>Pipe Grade Calculator (Invert Elevations) | The Pipelayer's Bible</title>
 <link rel="preload" href="/fonts/oswald-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css">
-<meta name="description" content="Free pipe grade calculator: start invert, slope or drop, and run length give invert elevations at every station, the fall and inches per foot, in feet and feet-inches.">
+<meta name="description" content="Free pipe grade calculator: start invert, slope or elevation change, and run length give invert elevations at every station, the fall and inches per foot, in feet and feet-inches.">
 <link rel="canonical" href="https://pipelayersbible.com/tools/pipe-grade-calculator/">
 
 <meta name="theme-color" content="#111318">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Pipelayer's Bible">
 <meta property="og:title" content="Pipe Grade Calculator (Invert Elevations) | The Pipelayer's Bible">
-<meta property="og:description" content="Free pipe grade calculator: start invert, slope or drop, and run length give invert elevations at every station, the fall and inches per foot, in feet and feet-inches.">
+<meta property="og:description" content="Free pipe grade calculator: start invert, slope or elevation change, and run length give invert elevations at every station, the fall and inches per foot, in feet and feet-inches.">
 <meta property="og:url" content="https://pipelayersbible.com/tools/pipe-grade-calculator/">
 <meta property="og:image" content="https://pipelayersbible.com/img/og-share.png">
 <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@
 <meta property="og:image:alt" content="The Pipelayer's Bible logo, a gold scope on black, with the words Field to office, seamlessly">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pipe Grade Calculator (Invert Elevations) | The Pipelayer's Bible">
-<meta name="twitter:description" content="Free pipe grade calculator: start invert, slope or drop, and run length give invert elevations at every station, the fall and inches per foot, in feet and feet-inches.">
+<meta name="twitter:description" content="Free pipe grade calculator: start invert, slope or elevation change, and run length give invert elevations at every station, the fall and inches per foot, in feet and feet-inches.">
 <meta name="twitter:image" content="https://pipelayersbible.com/img/og-share.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
@@ -45,7 +45,7 @@
    "@id": "https://pipelayersbible.com/tools/pipe-grade-calculator/#app",
    "name": "Pipe grade calculator",
    "url": "https://pipelayersbible.com/tools/pipe-grade-calculator/",
-   "description": "Free pipe grade calculator: start invert, slope or drop, and run length give invert elevations at every station, the fall and inches per foot, in feet and feet-inches.",
+   "description": "Free pipe grade calculator: start invert, slope or elevation change, and run length give invert elevations at every station, the fall and inches per foot, in feet and feet-inches.",
    "applicationCategory": "UtilitiesApplication",
    "operatingSystem": "Any (runs in a web browser)",
    "browserRequirements": "Requires JavaScript",
@@ -121,9 +121,9 @@
     <div class="field"><label for="g-len">Run length <span class="hint">feet</span></label><input id="g-len" type="number" inputmode="decimal" step="any" min="0" value="250"></div>
     <fieldset class="field"><legend>Grade given as</legend><div class="choices">
       <label><input type="radio" name="g-mode" value="pct" checked> Slope %</label>
-      <label><input type="radio" name="g-mode" value="drop"> Total drop (ft)</label></div></fieldset>
+      <label><input type="radio" name="g-mode" value="drop"> Elevation change (ft)</label></div></fieldset>
     <div class="field" id="g-slope-wrap"><label for="g-slope">Slope <span class="hint">percent, e.g. 0.40</span></label><input id="g-slope" type="number" inputmode="decimal" step="any" min="0" value="0.40"></div>
-    <div class="field" id="g-drop-wrap" hidden><label for="g-drop">Total drop over the run <span class="hint">feet</span></label><input id="g-drop" type="number" inputmode="decimal" step="any" min="0"></div>
+    <div class="field" id="g-drop-wrap" hidden><label for="g-drop">Elevation change over the run <span class="hint">feet</span></label><input id="g-drop" type="number" inputmode="decimal" step="any" min="0"></div>
     <fieldset class="field"><legend>Direction from the start</legend><div class="choices">
       <label><input type="radio" name="g-dir" value="down" checked> Falls</label>
       <label><input type="radio" name="g-dir" value="up"> Rises</label></div></fieldset>
