@@ -114,6 +114,19 @@ section{padding:56px 0}
   .hero-phone{display:block;justify-self:center;width:280px}
 }
 
+@media (max-width:519px){.hero-logo{width:60px;height:60px;border-radius:15px;margin-bottom:16px}.hero-sub{margin-bottom:22px}}
+/* quick answers */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.quick{padding:26px 0;background:var(--card);border-bottom:1px solid var(--rule)}
+.quick dl{margin:0;display:grid;gap:16px}
+.quick dl>div{border-left:4px solid var(--yellow);padding:2px 0 2px 14px}
+.quick dt{font-family:var(--head);font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:14px;color:var(--brand);margin:0 0 2px}
+.quick dd{margin:0;font-size:16px;line-height:1.45}
+.quick dd a{display:inline-block;padding:8px 0;margin:-8px 0;font-weight:700}
+@media (min-width:640px){.quick dl{grid-template-columns:repeat(2,1fr);gap:20px 28px}}
+@media (min-width:1000px){.quick dl{grid-template-columns:repeat(5,1fr);gap:20px}}
+.faq details{scroll-margin-top:16px}
+
 /* story */
 .story .wrap{display:grid;gap:24px}
 .story h2{max-width:20em}
@@ -240,7 +253,20 @@ form{display:grid;gap:18px}
    "url": "https://pipelayersbible.com/",
    "logo": "https://pipelayersbible.com/img/logo-192.png",
    "telephone": "+1-909-435-5250",
-   "email": "tfontaine@pipelayersbible.com"
+   "email": "tfontaine@pipelayersbible.com",
+   "founder": {
+    "@type": "Person",
+    "name": "Thomas Fontaine",
+    "jobTitle": "Underground foreman"
+   },
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-909-435-5250",
+    "email": "tfontaine@pipelayersbible.com",
+    "contactType": "sales and support",
+    "areaServed": "US",
+    "availableLanguage": "English"
+   }
   },
   {
    "@type": "WebSite",
@@ -259,7 +285,7 @@ form{display:grid;gap:18px}
    "url": "https://app.pipelayersbible.com",
    "applicationCategory": "BusinessApplication",
    "operatingSystem": "iOS, Android (web app)",
-   "description": "A phone app built for underground pipe crews. It works with no signal and puts the day's work in front of the foreman and the office without anyone retyping it.",
+   "description": "A phone app built for underground pipe crews: grade sheets, delay logs, confined space permits and daily reports. It works with no signal and puts the day's work in front of the foreman and the office without anyone retyping it.",
    "image": "https://pipelayersbible.com/img/og-share.png",
    "screenshot": [
     "https://pipelayersbible.com/img/shot-grade-sheet.webp",
@@ -290,10 +316,42 @@ form{display:grid;gap:18px}
     },
     {
      "@type": "Question",
-     "name": "What phones does it work on?",
+     "name": "What does it cost?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "iPhone and Android. It runs in the phone's browser, and you add it to the home screen so it opens like any other app. No app store needed. The first time, open it and sign in where there's signal."
+      "text": "The trial is free for 30 days: your company account plus 6 people, with no credit card. The app is in beta, and pricing is being set before the beta ends. You'll know the price before anyone asks you to pay, and nothing is charged automatically. The calculators and guides on this site are free, with no account."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I get it on my phone?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It works on iPhone and Android and it isn't in the app store. Ask for a trial and Thomas sets up your company and emails an invite to whoever will run it. They open the link, choose a password, and add the crew from the app. The app then shows how to put it on the home screen so it opens like any other app. On an iPhone: open it in Safari, tap Share, then Add to Home Screen. On Android: tap Install App in Chrome. Do this the first time where there's signal."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does my crew need email addresses?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. The office or a foreman can text a join link to a foreman or pipelayer. He taps it, agrees to the Terms and he's on the crew, with no email and no password. A link works once and lasts 24 hours."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Who is it for?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Crews that put sewer, storm drain and water pipe in the ground, and the people they report to. The pipelayer gets the grade sheet, check shots, the delay log and the permit. The foreman gets his crew's progress and a daily report that's already filled in. The superintendent, PM and office get every job, every signed report and the run records. See grade and cut sheets, daily reports and confined space permits."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Who's behind it?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Thomas Fontaine, an underground foreman with 12 years in underground construction. He built it and he's the one who answers: call or text (909) 435-5250 or email tfontaine@pipelayersbible.com."
      }
     },
     {
@@ -310,6 +368,14 @@ form{display:grid;gap:18px}
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "No. The confined space permit form records what your crew enters. It doesn't replace your safety program, your air monitor, training or your competent person. The emergency button opens the phone's dialer to the number on the permit; someone still makes the call, and it needs signal."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is it OSHA approved?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No, and nothing is: OSHA doesn't approve or certify apps. The permit form is built around the permit items in federal OSHA 29 CFR 1926.1206, and the trench calculator does the arithmetic on OSHA's Table B-1. Your state may be stricter than federal OSHA. Your competent person and your company's program decide what's safe and what's required."
      }
     },
     {
@@ -358,19 +424,32 @@ form{display:grid;gap:18px}
         <img class="hero-logo" src="/img/logo-192.png" width="88" height="88" alt="The Pipelayer's Bible logo: a gold scope crosshair on black">
         <h1 id="hero-title">The Pipelayer's <span>Bible</span></h1>
         <p class="tagline">Field to office, seamlessly</p>
-        <p class="hero-sub">A phone app built for underground pipe crews. It works with no signal and puts the day's work in front of the foreman and the office without anyone retyping it.</p>
+        <p class="hero-sub">A phone app built for underground pipe crews: grade sheets, delay logs, confined space permits and daily reports. It works with no signal and puts the day's work in front of the foreman and the office without anyone retyping it.</p>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="#start">Start a free trial</a>
           <a class="btn btn-ghost" href="https://app.pipelayersbible.com">Open the app
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
         </div>
-        <p class="hero-note">30 days free for your company and 6 people. No credit card.</p>
+        <p class="hero-note">30 days free for your company and 6 people. No credit card. Built by an underground foreman.</p>
       </div>
       <div class="hero-phone phone">
-        <img src="/img/shot-office-busy.webp" width="560" height="1212" loading="lazy" decoding="async" alt="Company Home in the app for an example company: 4 active runs and 1 active permit live now, 5 daily reports signed today, 3 delays and extra work, and 5 jobs underway starting with Main St Sewer Replacement">
+        <img src="/img/shot-office-busy.webp" width="560" height="1212" loading="lazy" decoding="async" alt="Company Home in the app for an example company: 4 active runs and 1 active permit under Live now, 5 daily reports signed today, 3 delays and extra work, and 5 jobs underway starting with Main St Sewer Replacement">
       </div>
     </div>
     <div class="stripe" aria-hidden="true"></div>
+  </section>
+
+  <section class="quick" aria-labelledby="quick-title">
+    <div class="wrap">
+      <h2 id="quick-title" class="sr">Quick answers</h2>
+      <dl>
+        <div><dt>Who it's for</dt><dd>Sewer, storm drain and water crews: pipelayers, foremen, superintendents and the office.</dd></div>
+        <div><dt>What it costs</dt><dd>Free for 30 days, no card. Pricing is being set before the beta ends. <a href="#q-cost">More</a></dd></div>
+        <div><dt>Getting it</dt><dd>iPhone and Android, no app store. It installs from an invite link. <a href="#q-phone">How</a></dd></div>
+        <div><dt>No signal</dt><dd>Runs, calculators and permits work offline and send later. <a href="#q-signal">Details</a></dd></div>
+        <div><dt>Who built it</dt><dd>Thomas Fontaine, an underground foreman. Call or text <a href="tel:+19094355250">(909) 435-5250</a>.</dd></div>
+      </dl>
+    </div>
   </section>
 
   <section class="story" aria-labelledby="story-title">
@@ -380,7 +459,7 @@ form{display:grid;gap:18px}
         <h2 id="story-title">12 years of underground experience went into building this program.</h2>
       </div>
       <div>
-        <p class="story-body">Thomas Fontaine has spent 12 years in underground construction. He built The Pipelayer's Bible for the things he saw on job after job: grade worked out by hand in the trench, delays nobody wrote down until the end of the day, and a daily report typed up again at night from memory. The app keeps that work on the phone where it happens and sends it to the foreman and the office when there's signal. It's built in the field, for the field, and it keeps getting better every time a crew says what's wrong with it.</p>
+        <p class="story-body">Thomas Fontaine is an underground foreman with 12 years in underground construction. He built The Pipelayer's Bible for the things he saw on job after job: grade worked out by hand in the trench, delays nobody wrote down until the end of the day, and a daily report typed up again at night from memory. The app keeps that work on the phone where it happens and sends it to the foreman and the office when there's signal. It's built in the field, for the field, and it keeps getting better every time a crew says what's wrong with it.</p>
         <p class="story-sign">Thomas Fontaine</p>
       </div>
     </div>
@@ -397,10 +476,10 @@ form{display:grid;gap:18px}
             <h3 id="r-pl">Pipelayer</h3>
           </div>
           <ul>
-            <li>Calculates pipe grades from survey stake photos or manually entered survey data</li>
+            <li>Works out pipe grades from survey stake photos (read by AI, then checked by you) or from numbers you enter</li>
             <li>Check shots, footage, slope and pipe info at a glance</li>
             <li>Time-stamped delay log: utility conflict, inspector, weather, equipment down, material, survey/stakes, traffic control</li>
-            <li>Confined space permits and entry log, with a one-tap emergency call</li>
+            <li>Confined space permits and entry log, with an emergency button that opens the phone's dialer</li>
             <li>Calculators for trenching, grade, materials and more</li>
             <li>Built-in AI assistant for civil work questions on the job</li>
           </ul>
@@ -412,10 +491,10 @@ form{display:grid;gap:18px}
           </div>
           <ul>
             <li>Full access to all pipelayer features</li>
-            <li>Sees his crew's run progress live</li>
+            <li>Sees his crew's run progress as their phones send it</li>
             <li>Daily reports filled in automatically from the day's work</li>
             <li>Field tickets with photo upload</li>
-            <li>Warnings when an 811 ticket is nearly expired</li>
+            <li>Warnings when an 811 ticket is nearly expired, in states where the ticket life is set by law</li>
             <li>Extra work documentation</li>
             <li>Built-in AI assistant for civil work questions on the job</li>
           </ul>
@@ -427,11 +506,11 @@ form{display:grid;gap:18px}
           </div>
           <ul>
             <li>Material takeoffs from your plan sets <span class="addon">add-on</span></li>
-            <li>A PDF of every run, time-stamped at every point</li>
-            <li>A sealed original of each run PDF, so any later change would show</li>
+            <li>A PDF of every run, with the phone's time at every point</li>
+            <li>A sealed original of each run PDF, so a later change to that file would show</li>
             <li>Signed daily reports with production from every job and every crew</li>
-            <li>Search and export every record</li>
-            <li>Built-in AI for civil work questions, crew management and your company's data</li>
+            <li>Search your records and export runs, daily reports and permits</li>
+            <li>Built-in AI for civil work questions and for questions about your company's own numbers</li>
           </ul>
         </article>
       </div>
@@ -470,9 +549,10 @@ form{display:grid;gap:18px}
       <p class="eyebrow">Try it on a real job</p>
       <h2 id="trial-title">Free 30-day trial</h2>
       <p class="trial-lead"><strong>Your company account plus 6 people.</strong> No credit card, and no automatic payment when it's over. At the end, whoever ran it gets a one-page summary of what the crew logged (footage, delays, inspections, paperwork sent) to show the owner.</p>
+      <p class="trial-lead" style="font-size:17px">The app is in beta. Pricing is being set before the beta ends, and you'll know the price before anyone asks you to pay.</p>
       <ol class="steps">
         <li>Send the email of whoever will run it, usually the superintendent.</li>
-        <li>Thomas sets up your company the same day and sends them the invite. They add their own crew right from the app.</li>
+        <li>Thomas sets up your company, usually the same day, and sends them the invite. They add their own crew right from the app.</li>
         <li>The crew installs it from the invite and starts logging runs.</li>
       </ol>
       <a class="btn btn-primary" href="#start">Start a free trial</a>
@@ -493,14 +573,33 @@ form{display:grid;gap:18px}
       <p class="eyebrow">Straight answers</p>
       <h2 id="faq-title">Questions</h2>
       <div class="faq-list">
-        <details>
+        <details id="q-signal">
           <summary>Does it work with no signal?</summary>
           <div class="ans"><p>Yes. Runs, calculators and permits work with no signal. Records save on the phone and send when signal is back.</p>
           <p>The AI features, signing in and anything shared with the office need signal, and until a record has sent, the only copy is on that phone.</p></div>
         </details>
+        <details id="q-cost">
+          <summary>What does it cost?</summary>
+          <div class="ans"><p>The trial is free for 30 days: your company account plus 6 people, with no credit card. The app is in beta, and pricing is being set before the beta ends. You'll know the price before anyone asks you to pay, and nothing is charged automatically.</p>
+          <p>The <a href="/tools/">calculators</a> and <a href="/guides/">guides</a> on this site are free, with no account.</p></div>
+        </details>
+        <details id="q-phone">
+          <summary>How do I get it on my phone?</summary>
+          <div class="ans"><p>It works on iPhone and Android and it isn't in the app store. <a href="#start">Ask for a trial</a> and Thomas sets up your company and emails an invite to whoever will run it. They open the link, choose a password, and add the crew from the app.</p>
+          <p>The app then shows how to put it on the home screen so it opens like any other app. On an iPhone: open it in Safari, tap Share, then Add to Home Screen. On Android: tap Install App in Chrome. Do this the first time where there's signal.</p></div>
+        </details>
         <details>
-          <summary>What phones does it work on?</summary>
-          <div class="ans"><p>iPhone and Android. It runs in the phone's browser, and you add it to the home screen so it opens like any other app. No app store needed. The first time, open it and sign in where there's signal.</p></div>
+          <summary>Does my crew need email addresses?</summary>
+          <div class="ans"><p>No. The office or a foreman can text a join link to a foreman or pipelayer. He taps it, agrees to the Terms and he's on the crew, with no email and no password. A link works once and lasts 24 hours.</p></div>
+        </details>
+        <details>
+          <summary>Who is it for?</summary>
+          <div class="ans"><p>Crews that put sewer, storm drain and water pipe in the ground, and the people they report to. The pipelayer gets the grade sheet, check shots, the delay log and the permit. The foreman gets his crew's progress and a daily report that's already filled in. The superintendent, PM and office get every job, every signed report and the run records.</p>
+          <p>See <a href="/grade-and-cut-sheet-app/">grade and cut sheets</a>, <a href="/daily-reports-for-underground-crews/">daily reports</a> and <a href="/confined-space-permit-app/">confined space permits</a>.</p></div>
+        </details>
+        <details>
+          <summary>Who's behind it?</summary>
+          <div class="ans"><p>Thomas Fontaine, an underground foreman with 12 years in underground construction. He built it and he's the one who answers: call or text <a href="tel:+19094355250">(909) 435-5250</a> or email <a href="mailto:tfontaine@pipelayersbible.com">tfontaine@pipelayersbible.com</a>.</p></div>
         </details>
         <details>
           <summary>Who owns our data?</summary>
@@ -510,6 +609,10 @@ form{display:grid;gap:18px}
         <details>
           <summary>Does it replace our safety program?</summary>
           <div class="ans"><p>No. The confined space permit form records what your crew enters. It doesn't replace your safety program, your air monitor, training or your competent person. The emergency button opens the phone's dialer to the number on the permit; someone still makes the call, and it needs signal.</p></div>
+        </details>
+        <details>
+          <summary>Is it OSHA approved?</summary>
+          <div class="ans"><p>No, and nothing is: OSHA doesn't approve or certify apps. The permit form is built around the permit items in federal OSHA 29 CFR 1926.1206, and the trench calculator does the arithmetic on OSHA's Table B-1. Your state may be stricter than federal OSHA. Your competent person and your company's program decide what's safe and what's required.</p></div>
         </details>
         <details>
           <summary>Is the AI always right?</summary>
@@ -635,7 +738,9 @@ form{display:grid;gap:18px}
         <li><a href="/tools/">Free tools</a></li>
         <li><a href="/guides/">Guides</a></li>
         <li><a href="/tools/pipe-grade-calculator/">Pipe grade calculator</a></li>
+        <li><a href="/tools/rod-reading-to-invert/">Rod reading to invert</a></li>
         <li><a href="/tools/trench-sloping/">Trench sloping</a></li>
+        <li><a href="/guides/trench-depth-rules/">Trench depth rules</a></li>
         <li><a href="/grade-and-cut-sheet-app/">Grade and cut sheets</a></li>
         <li><a href="/daily-reports-for-underground-crews/">Daily reports</a></li>
         <li><a href="/confined-space-permit-app/">Confined space permits</a></li>
@@ -646,6 +751,13 @@ form{display:grid;gap:18px}
   </div>
 </footer>
 
+<script>
+(function () {
+  // a link to a question (#q-cost and the like) opens that question
+  function openQ() { var id = location.hash.slice(1), el = id && document.getElementById(id); if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView(); } }
+  window.addEventListener('hashchange', openQ); openQ();
+})();
+</script>
 <script>
 (function () {
   var form = document.getElementById('trial-form');
